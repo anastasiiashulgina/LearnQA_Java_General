@@ -4,5 +4,5 @@ plugins {
 }
 
 application {
-    mainClassName = 'TestProgram'
+    mainClassName = 'ru.stqa.pft.sandbox.TestProgram'
 }

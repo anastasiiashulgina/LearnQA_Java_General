@@ -2,9 +2,9 @@ package ru.stqa.pft.sandbox;
 
 public class TestProgram {
   public static void main(String[] args) {
-    Point p1 = new Point(2, 2);
+    Point p1 = new Point(1, 1);
 
-    Point p2 = new Point(17, 3);
+    Point p2 = new Point(1, 2);
 
     System.out.println("Distance between 2 points is " + p1.distance(p2));
 

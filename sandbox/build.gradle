@@ -4,5 +4,16 @@ plugins {
 }
 
 application {
-    mainClassName = 'ru.stqa.pft.sandbox.TestProgram'
+    mainClassName = 'ru.stqa.pft.sandbox.PointTests'
+}
+
+repositories {mavenCentral()}
+
+dependencies {implementation group: 'org.testng', name: 'testng', version: '7.3.0'}
+
+test {
+    useTestNG()
+    testLogging {
+        events 'passed', 'skipped', 'failed'
+    }
 }

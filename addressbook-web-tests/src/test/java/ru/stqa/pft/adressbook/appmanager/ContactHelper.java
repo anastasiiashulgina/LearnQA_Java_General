@@ -6,6 +6,7 @@ import ru.stqa.pft.adressbook.model.ContactData;
 
 public class ContactHelper extends HelperBase{
 
+
   public ContactHelper(WebDriver wd) {
     super(wd);
   }
@@ -37,4 +38,23 @@ public class ContactHelper extends HelperBase{
   public void submitContactModification() {
     click(By.name("update"));
   }
+
+  public boolean isContactPresent() {
+   return isElementPresent(By.name("selected[]"));
+  }
+
+  public void createNewContact(ContactData contactData) {
+    goToNewContactPage();
+    fillNewContactForm(contactData);
+    submitNewContactCreation();
+    returnToHomePage();
+  }
+
+  public void returnToHomePage() {
+    click(By.linkText("home page"));
+  }
+  public void goToNewContactPage() {
+    click(By.linkText("add new"));
+  }
+
 }

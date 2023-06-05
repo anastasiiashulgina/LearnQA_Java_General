@@ -30,7 +30,6 @@ public class ApplicationManager {
       wd = new InternetExplorerDriver();
     }
 
-    wd = new ChromeDriver();
     wd.manage().timeouts().implicitlyWait(Duration.ofSeconds(0));
     wd.get("http://localhost/addressbook/");
     groupHelper = new GroupHelper(wd);
